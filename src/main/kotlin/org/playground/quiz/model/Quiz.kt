@@ -20,6 +20,7 @@ data class Quiz(
     @Fetch(FetchMode.SUBSELECT)
     val options: List<String>,
 
+    @JsonIgnore
     @ElementCollection(fetch = FetchType.EAGER)
     @Fetch(FetchMode.SUBSELECT)
     val answer: Set<Int> = setOf(),
